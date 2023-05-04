@@ -1,0 +1,28 @@
+h6{
+    color: red;
+    text-shadow: 2px 2px 4px #000000;    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card{
+    cursor: pointer;
+    // transition: width 2s, height 4s;
+}
+.container-fluid{
+    width: 100% ;
+}
+
+
+img:hover{
+   
+    
+ 
+    // transition: width 5s, height 2s, transform 2s;
+}
+div img:hover{
+    transform: scale(1.05);
+    transition:all 0.5s;
+    border-radius: 10px;
+}
+// .rowposter{
+//     overflow-x: auto;
+// }

@@ -1,0 +1,32 @@
+<div class="container">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
+   
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="{{movieDetail?.backdrop_path}}" alt="slide">
+            <div class="row m-lg-2">
+
+            <div class="col-md-12">
+                
+                <h2 class="card-title text-white text-info mt-2">{{movieDetail?.title}}</h2>
+            </div>
+            <div class="col-md-12 mt-1 ">
+                
+                <span class="card-title text-secondary mt-2">{{movieDetail?.overview}}</span>
+            </div>
+        
+               
+            <div class="col-md-4">
+               
+                    <p class="mt-2"><span class="text-warning">Rating : {{movieDetail?.vote_average}}</span></p>
+                    <p class="text-white mt-2">Language : <span class="p-1" style="background-color: #424242;"><b> {{movieDetail?.original_language}}</b></span></p>
+
+            </div>
+        </div>
+          
+          </div>
+    
+        </div>
+        
+      </div>
+</div>
