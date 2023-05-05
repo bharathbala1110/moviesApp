@@ -1,6 +1,6 @@
 <div class="container-fluid p-0 m-0 bg-gray">
   <!-- latest movies -->
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" *ngIf="latestMovies">
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" *ngIf="latestMovies">
    
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -11,32 +11,33 @@
 
     </div>
     
-  </div>
+  </div> -->
 
 <!-- trending movies  -->
 
 <div class="row  pt-2 px-2 text-white " style="background-color: gray;">
   <h6>Trending Movies</h6>
-  <div class="col-md-2 mt-3 " *ngFor="let movie of TrendingMovies?.results;let i=index">
-    <div class="card bg-dark" *ngIf="i<6" >
+<div class="rowposter">
+
+  <div class="col-md-2 mt-2 m-1" *ngFor="let movie of TrendingMovies?.results;let i=index">
+    <div class="card bg-dark" >
         <img class="card-img-top" src="{{movie?.backdrop_path}}" alt="slide" (click)="movieByID(movie.id)" >
         <!-- <iframe *ngIf="id" [src]="youTubeUrl" width="600" height="400" frameborder="0"></iframe> -->
 
 
 
-<div class="card-body">
+          <div class="card-body">
   
- 
+      
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
             </div>
   </div>
   </div>
-  <div class="container">
-   
-  </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-
+  </div>
+ 
 </div>
 
 <!-- popular movies  -->
@@ -44,8 +45,8 @@
 <div class="row pt-2 px-2 text-white " style="background-color: gray;">
   <h6>Popular Movies</h6>
   <!-- <div class="d-flex flex-nowrap overflow-x-auto"> -->
-<!-- <div class="rowposter"> -->
-  <div class="col-md-2 mt-3 rowposter" *ngFor="let movie of PopularMovies?.results;let i=index">
+<div class="rowposter">
+  <div class="col-md-2 mt-2 m-1 " *ngFor="let movie of PopularMovies?.results;let i=index">
 <!-- <div class="rowposter"> -->
 
     <div class="card bg-dark"                                                                         >
@@ -54,9 +55,11 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
+
             </div>
     </div>
-    <!-- </div> -->
+    </div>
   <!-- </div> -->
   </div>
 <!-- </div> -->
@@ -87,14 +90,19 @@
 
 <div class="row  pt-2 px-2 text-white" style="background-color: gray;">
   <h6>Upcoming Movies</h6>
-  <div class="col-md-2 mt-3" *ngFor="let movie of Upcoming?.results;let i=index">
-    <div class="card bg-dark" *ngIf="i<6">
+<div class="rowposter">
+
+  <div class="col-md-2 mt-2 m-1"  *ngFor="let movie of Upcoming?.results;let i=index">
+    <div class="card bg-dark" >
           <img class="card-img-top" src="{{movie?.backdrop_path}}" alt="slide" (click)="movieByID(movie.id)">
 <div class="card-body">
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
+
             </div>
+  </div>
   </div>
   </div>
 
@@ -104,14 +112,19 @@
 
 <div class="row  pt-2 px-2 text-white" style="background-color: gray;" >
   <h6>Now Playing Movies</h6>
-  <div class="col-md-2 mt-3" *ngFor="let movie of PlayingMovies?.results;let i=index">
-    <div class="card bg-dark" *ngIf="i<6">
+<div class="rowposter">
+
+  <div class="col-md-2 mt-2 m-1" *ngFor="let movie of PlayingMovies?.results;let i=index">
+    <div class="card bg-dark" >
           <img class="card-img-top" src="{{movie?.backdrop_path}}" alt="slide" (click)="movieByID(movie.id)">
 <div class="card-body">
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
+
             </div>
+  </div>
   </div>
   </div>
 
@@ -122,14 +135,19 @@
 
 <div class="row  pt-2 px-2 text-white" style="background-color: gray;">
   <h6>Top Rated Movies</h6>
-  <div class="col-md-2 mt-3" *ngFor="let movie of TopRatedMovies?.results;let i=index">
-    <div class="card bg-dark" *ngIf="i<6">
+<div class="rowposter">
+
+  <div class="col-md-2 mt-2 m-1" *ngFor="let movie of TopRatedMovies?.results;let i=index">
+    <div class="card bg-dark" >
           <img class="card-img-top" src="{{movie?.backdrop_path}}" alt="slide" (click)="movieByID(movie.id)">
 <div class="card-body">
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
+
             </div>
+  </div>
   </div>
   </div>
 
@@ -139,17 +157,21 @@
 
 <div class="row  pt-2 px-2 text-white" style="background-color: gray;">
   <h6>Original Movies</h6>
-  <div class="col-md-2 mt-3" *ngFor="let movie of Originals?.results;let i=index">
-    <div class="card bg-dark" *ngIf="i<6">
+<div class="rowposter">
+
+  <div class="col-md-2 mt-2 m-1" *ngFor="let movie of Originals?.results;let i=index">
+    <div class="card bg-dark" >
           <img class="card-img-top" src="{{movie?.backdrop_path}}" alt="slide" (click)="movieByID(movie.id)">
   <div class="card-body">
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
+             <button class="btn btn-outline-info">Watch trailer</button>
+
             </div>
   </div>
   </div>
-
+</div>
 </div>
 
 </div>
