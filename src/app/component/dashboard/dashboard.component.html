@@ -32,7 +32,7 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info"  (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
             </div>
   </div>
   </div>
@@ -55,7 +55,7 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info" (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
 
             </div>
     </div>
@@ -99,7 +99,7 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info" (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
 
             </div>
   </div>
@@ -121,7 +121,7 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info" (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
 
             </div>
   </div>
@@ -144,7 +144,7 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info" (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
 
             </div>
   </div>
@@ -155,7 +155,7 @@
 
 <!-- original movies  -->
 
-<div class="row  pt-2 px-2 text-white" style="background-color: gray;">
+<!-- <div class="row  pt-2 px-2 text-white" style="background-color: gray;">
   <h6>Original Movies</h6>
 <div class="rowposter">
 
@@ -166,12 +166,12 @@
              <h5 class="card-title">{{movie.title}}</h5>
              <p><span class="text-warning">Rating</span> : {{movie.vote_average}}</p>
              <p>Language : <span class="p-1" style="background-color: #424242;"><b> {{movie.original_language}}</b></span></p>
-             <button class="btn btn-outline-info">Watch trailer</button>
+             <button class="btn btn-outline-info" (click)="iFrameVideo(movie.original_title)">Watch trailer</button>
 
             </div>
   </div>
   </div>
 </div>
-</div>
+</div> -->
 
 </div>

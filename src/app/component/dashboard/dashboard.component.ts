@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Movies } from 'src/app/modal/movie';
 import { DataService } from 'src/app/service/data.service';
 import { environment } from 'src/environments/environment';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'app-dashboard',
@@ -29,16 +30,24 @@ export class DashboardComponent implements OnInit {
   movieID: any;
 
 
-  constructor(private dataService:DataService,private router:Router ) { }
+  constructor(private dataService:DataService,private router:Router,private spinner:NgxSpinnerService ) { }
 
   ngOnInit(): void {
-    this.getLatestMovies()
-    this.getPopularMovies()
-    this.getPlayingMovies()
-    this.getTrendingMovies()
-    this.getTopRatedMovies()
-    this.getOriginals()
-    this.getUpcoming()
+    this.spinner.show().then(()=>{
+      setTimeout(()=>{
+        this.spinner.hide();
+      },1500)
+    });
+
+   
+  
+    this.getLatestMovies();
+    this.getPopularMovies();
+    this.getPlayingMovies();
+    this.getTrendingMovies();
+    this.getTopRatedMovies();
+    this.getOriginals();
+    this.getUpcoming();
   }
 
   iFrameVideo(element:any){
@@ -52,7 +61,7 @@ export class DashboardComponent implements OnInit {
     const firstVideo=resp.items[0]
     this.id=firstVideo.id.videoId
       this.youTubeUrl=`https://www.youtube.com/watch?v=${firstVideo.id.videoId}`  
-    // window.open(this.youTubeUrl,'_blank') 
+    window.open(this.youTubeUrl,'_blank') 
   })
   }
  
